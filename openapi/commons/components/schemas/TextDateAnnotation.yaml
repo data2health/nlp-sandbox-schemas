@@ -4,13 +4,19 @@ allOf:
   - $ref: TextAnnotation.yaml
   - type: object
     properties:
+      date:
+        description: The date contained in the annotation
+        type: string
+        format: date
       dateFormat:
         description: Date format (ISO 8601)
         type: string
-        example: MM/DD/YYYY
+    required:
+      - date
 example:
   start: 42
   length: 10
-  text: 10/26/2020
+  text: 12/26/2020
   dateFormat: MM/DD/YYYY
+  date: 2020-12-26
   confidence: 95.5
